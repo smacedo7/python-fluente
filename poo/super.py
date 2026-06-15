@@ -62,3 +62,34 @@ c.metodo()
 # print(c.atributo_b)
 # print(c.atributo_c)
 # c.metodo()
+
+# se tiver seu proprio init precisa puxar
+
+
+class Pessoa2:
+    def __init__(self, nome):
+        self.nome = nome
+
+
+class Aluno2(Pessoa2):
+    pass
+
+
+aluno = Aluno2('Samuel')
+print(aluno.nome)
+
+
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+
+
+class Aluno(Pessoa):
+    def __init__(self, nome, matricula):
+        super().__init__(nome)
+        self.matricula = matricula
+
+
+# serve para reaproveitar a inicialização da classe pai,
+#  em vez de recriar tudo na classe filha.
+aluno = Aluno('Samuel', '123')
