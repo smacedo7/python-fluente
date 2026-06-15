@@ -7,12 +7,12 @@ LOG_FILE = Path(__file__).parent / 'log.txt'
 
 
 class Log:
-    def _log(self, msg):  # assinatura do metodo
+    def _log(self, msg):  # assinatura do metodo, metodo abstrato
         raise NotImplementedError(
             'Implemente o método log'
         )
 
-    def log_error(self, msg):
+    def log_error(self, msg):  # metodo concreto
         return self._log(f'Error: {msg}')
 
     def log_success(self, msg):
