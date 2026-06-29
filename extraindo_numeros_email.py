@@ -22,7 +22,7 @@ email_re = re.compile(r'''(
                       (\.[a-zA-Z]{2, 4})
                       )''', re.VERBOSE)
 
-text = str(pyperclip.paste())
+text = str(pyperclip.paste())  # pega oq eu copiei da area de transferencia
 
 matches = []
 for groups in phone_re.findall(text):
@@ -34,3 +34,9 @@ for groups in phone_re.findall(text):
 for groups in email_re.findall(text):
     matches.append(groups)
 
+if len(matches) > 0:
+    pyperclip.copy('\n'.join(matches))
+    print('copied to clipboard')
+    print('\n'.join(matches))
+else:
+    print('no phone numbers or email found')
