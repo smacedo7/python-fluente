@@ -1,7 +1,7 @@
 class Caneta:
     def __init__(self, cor):
         # private protected
-        self.cor = cor
+        self._cor = cor
         self._cor_tampa = None
 
     @property
