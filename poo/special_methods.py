@@ -37,9 +37,11 @@ p1 = Ponto(1, 2)
 p2 = Ponto(978, 876)
 print(p1)  # (1, 2)
 print(p2)  # (978, 876)
-print(repr(p2))
+print(repr(p2))  # Ponto(x=978, y=876, z='String')
 print(f'{p2!r}')  # algum dos dois jeitos
 
+# repr é como o objeto deve ser criado na hora da instanciação?
+# str é como o objeto deve ser retornado quando print(objeto)
 
 # class Ponto:
 #     def __init__(self, x, y):
