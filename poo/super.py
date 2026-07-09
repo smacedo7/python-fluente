@@ -76,7 +76,7 @@ class Aluno2(Pessoa2):
 
 
 aluno = Aluno2('Samuel')
-print(aluno.nome)
+print(aluno.nome)  # samuel
 
 
 class Pessoa:
