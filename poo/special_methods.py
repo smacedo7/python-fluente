@@ -59,3 +59,5 @@ print(f'{p2!r}')  # algum dos dois jeitos
 
 # Horroroso.
 # "Como eu transformo esse objeto em texto?"
+
+# "Quando alguém precisar de uma representação desse objeto (listas, terminal, debug...), mostre isso." 
