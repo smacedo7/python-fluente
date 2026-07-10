@@ -40,3 +40,6 @@ v1 = Vetor(2, 3)
 v2 = Vetor(4, 5)
 v3 = v1 + v2
 print(v3)
+
+# quando escreve a + b, ta fazendo:
+# a.__add__(b)
