@@ -76,7 +76,51 @@ Path(r'/Users/samuelmacedo/Projetos/python/python-fluente/arquivos/fantinha').mk
 "--------------------------------------------------------------------"
 
 # para saber se é o caminho absoluto:
+# caminho relativo é tudo que parte do diretorio atual!
+# caminho absoluto comeca pela pasta raiz
 
 print(Path.cwd().is_absolute())  # True
 
 print(Path('bacon/molester/cheesecake').is_absolute())  # False
+
+limparTela()
+"--------------------------------------------------------------------"
+# encontrar caminho absoluto a partir de um caminnho relativo:
+
+print(Path.cwd())  # /Users/samuelmacedo/Projetos/python
+
+print(Path.cwd() / Path('my/relative/path'))  # /Users/samuelmacedo/Projetos/python/my/relative/path
+# todo o caminho absoluto desde a base ate a pasta que passamos
+
+print(Path('my/relative/path').absolute())  # /Users/samuelmacedo/Projetos/python/my/relative/path
+
+print(Path.home() / Path('my/relative/path'))  # /Users/samuelmacedo/my/relative/path
+
+limparTela()
+
+"--------------------------------------------------------------------"
+# partes de um arquivo: 
+
+# pasta raiz do sistema de arquuivos
+# pasta pai
+# nome do arquivo com extensao
+# sao atributos, nao precisa de parenteses no final
+
+# anchor, parent, name, stem, suffix, drive
+
+# para extrair cada parte desse arquivo:
+
+print(Path.cwd())  # /Users/samuelmacedo/Projetos/python
+
+print(Path.cwd().anchor)  # /
+print(Path.cwd().name)  # python
+print(Path.cwd().parent)  # /Users/samuelmacedo/Projetos podemos acessar com o indice numerico tipo parents[0]
+print(Path.cwd().stem)  # python
+print(Path.cwd().suffix)  # sem
+print(Path.cwd().drive)  # sem
+
+# dividir por partes com o atributo: 
+
+print(Path.cwd().parts)  # ('/', 'Users', 'samuelmacedo', 'Projetos', 'python')
+"--------------------------------------------------------------------"
+

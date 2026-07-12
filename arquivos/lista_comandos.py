@@ -25,4 +25,12 @@ print(Path.cwd())  # /Users/samuelmacedo/Projetos/python -> alterou diretorio pr
 
 # os.mkdir()  # cria um diretorio
 
-print(Path.cwd().is_absolute())
+print(Path.cwd().is_absolute())  # True
+
+print(Path('my/favorite/path').absolute())  # /Users/samuelmacedo/Projetos/python/my/favorite/path
+
+print(Path.cwd() / Path('my/relative/path'))  # /Users/samuelmacedo/Projetos/python/my/relative/path
+
+limpa_tela()
+
+print(Path.home() / Path('my/relative/path'))  # /Users/samuelmacedo/my/relative/path
