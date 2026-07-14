@@ -78,7 +78,7 @@ print(content)
 
 pokeball = 'with.txt'
 
-with open(pokeball, 'a', encoding='utf-8') as ash:
+with open(pokeball, 'a', encoding='utf-8') as ash:  # caminho arquivo e objeto file depois
     ash.write('gotcha in all!')
 
 # variavel é criada so no final!

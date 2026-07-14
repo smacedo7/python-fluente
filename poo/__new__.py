@@ -15,11 +15,11 @@ depois
 Usuario.__init__(objeto, "Samuel")
 recebe cls pq ainda nao tem uma instancia para ser colocada no self
 
-new -> cria o onjeto -> init -> configura o objeto
+new -> cria o objeto -> init -> configura o objeto
 
 diferença entre new e init:
 
-new -> cria o objeto e retorn o objeto
+new -> cria o objeto e retorna o objeto
 init -> recebe o objeto ja criado, apenas configura seus atributos e sempre retorna none
 
 usar quando precisar controlar a criaçao do objeto antes dele existir.

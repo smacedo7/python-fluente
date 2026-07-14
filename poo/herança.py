@@ -38,5 +38,5 @@ pessoa2 = Aluno('luiz', 34)
 pessoa2.mostra_classe()
 
 pessoa3 = Cliente('pedro augusto', 23)
-pessoa3.mostra_classe()
+pessoa3.mostra_classe()  # CLASSE PESSOA -> a classe de pedro augusto é Cliente
 print(pessoa3.cpf)

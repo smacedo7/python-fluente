@@ -43,6 +43,7 @@ with MyOpen('context_manager.txt', 'w') as arquivo:  # retorno vem pra ca
     arquivo.write('Linha 3\n')
     print('WITH', arquivo)
 
+# arquivo é objeto da classe MyOpen e tem seus metodos
 # usamos o with pq quando o bloco terminar, o py garante que o arquivo sera
 # fechado
 # Sem with:
