@@ -34,3 +34,14 @@ print(Path.cwd() / Path('my/relative/path'))  # /Users/samuelmacedo/Projetos/pyt
 limpa_tela()
 
 print(Path.home() / Path('my/relative/path'))  # /Users/samuelmacedo/my/relative/path
+
+p = Path.cwd()
+
+limpa_tela()
+
+print('-------------------------------------')
+
+# gravacao e leitura de arquivos: 
+
+p.write_text('goated smacedooo')
+p.read('spam.txt')

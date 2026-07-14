@@ -29,7 +29,6 @@ limparTela()
 
 "--------------------------------------------------------------------"
 
-
 # obter diretorio atual: 
 
 print(Path.cwd())  # /Users/samuelmacedo/Projetos/python/python-fluente
@@ -73,6 +72,7 @@ Path(r'/Users/samuelmacedo/Projetos/python/python-fluente/arquivos/fantinha').mk
 # para criar varias pastas: 
 
 # Path(r'/Users/samuelmacedo/Projetos/python/python-fluente/arquivos/fantinha').mkdir(parents=True, exist_ok=True)
+# parents=True é para criar as pastas familiares automaticamente 
 "--------------------------------------------------------------------"
 
 # para saber se é o caminho absoluto:
@@ -93,8 +93,10 @@ print(Path.cwd() / Path('my/relative/path'))  # /Users/samuelmacedo/Projetos/pyt
 # todo o caminho absoluto desde a base ate a pasta que passamos
 
 print(Path('my/relative/path').absolute())  # /Users/samuelmacedo/Projetos/python/my/relative/path
+# todo caminho absoluto desde a pasta relativa, ou seja, tudo para tras
 
 print(Path.home() / Path('my/relative/path'))  # /Users/samuelmacedo/my/relative/path
+# mesma coisa, tudo da relativa para tras
 
 limparTela()
 
@@ -122,5 +124,34 @@ print(Path.cwd().drive)  # sem
 # dividir por partes com o atributo: 
 
 print(Path.cwd().parts)  # ('/', 'Users', 'samuelmacedo', 'Projetos', 'python')
+# retorna tupla que pode ser acessada por indices
 "--------------------------------------------------------------------"
 
+# localizar arquivos com padrao glob:
+
+# '*' faz correspondencia com qualquer sequencia de texto
+# '?' faz correspondencia com somente um caractere
+# *.txt -> faz correspondencia com qualquer que acaba com txt
+# project*.txt -> faz correspondencia com project1.txt e projectx.txt
+
+limparTela()
+"--------------------------------------------------------------------"
+
+# verificar veracidade de um caminho: 
+# adota-se p como uma variavel que é objeto de path
+# usam-se metodos, nao atributos.
+
+
+p = Path.cwd()
+print(p)  # /Users/samuelmacedo/Projetos/python
+
+print(p.exists())  # True -> retorna True se o caminho existir
+print(p.is_dir())  # True  -> returna True se o caminho existir e for um diretorio
+print(p.is_file())  # False -> retorna True o caminho existir e for um arquivo
+
+"--------------------------------------------------------------------"
+
+# processo de leitura e gravacao de arquivos:
+# arquivos de texto simples com .txt ou .py
+# arquivos binarios sao aqueles que guardam bytes, e nao texto diretamente legivel.
+# exemplo: imagens, videos, audios, pdfs
