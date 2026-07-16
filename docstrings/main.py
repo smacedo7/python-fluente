@@ -1,0 +1,3 @@
+import documentando_funcs
+
+help(documentando_funcs)
